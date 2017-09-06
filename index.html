@@ -12,41 +12,41 @@
       color:#fff;
     }
   </style>
-  <title>Weight Converter</title>
+  <title>Convertidor de longitudes</title>
 </head>
 <body>
   <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h1 class="display-4 text-center mb-3">Weight Converter</h1>
+        <h1 class="display-4 text-center mb-3">Convertidor de longitudes</h1>
         <form>
           <div class="form-group">
             <input
-            id="lbsInput"
+            id="mInput"
             type="number"
-            class="form-control form-control-lg" placeholder="Enter Pounds..."
+            class="form-control form-control-lg" placeholder="Ingrese metros..."
             >
           </div>
         </form>
         <div id="output">
           <div class="card card-primary mb-2">
             <div class="card-block">
-              <h4>Grams:</h4>
-              <div id="gramsOutput"></div>
+              <h4>Pulgadas:</h4>
+              <div id="inOutput"></div>
             </div>
           </div>
 
           <div class="card card-success mb-2">
             <div class="card-block">
-              <h4>Kilograms:</h4>
-              <div id="kgOutput"></div>
+              <h4>Pies:</h4>
+              <div id="ftOutput"></div>
             </div>
           </div>
 
           <div class="card card-danger mb-2">
             <div class="card-block">
-              <h4>Ounces:</h4>
-              <div id="ozOutput"></div>
+              <h4>Yardas:</h4>
+              <div id="ydOutput"></div>
             </div>
           </div>
         </div>
@@ -56,12 +56,12 @@
 
   <script>
     document.getElementById('output').style.visibility = 'hidden';
-    document.getElementById('lbsInput').addEventListener('input', function(e){
+    document.getElementById('mInput').addEventListener('input', function(e){
       document.getElementById('output').style.visibility = 'visible';
-      let lbs = e.target.value;
-      document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
-      document.getElementById('kgOutput').innerHTML = lbs/2.2046;
-      document.getElementById('ozOutput').innerHTML = lbs*16;
+      let m = e.target.value;
+      document.getElementById('inOutput').innerHTML = m*39.37;
+      document.getElementById('ftOutput').innerHTML = m*3.28;
+      document.getElementById('ydOutput').innerHTML = m*1.09;
     });
   </script>
 </body>
